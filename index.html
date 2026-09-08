@@ -9,6 +9,7 @@
   <style>
     body {
       font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
     }
     .navbar {
       background-color: #fff;
@@ -47,6 +48,38 @@
       color: #bfa14a;
       text-decoration: none;
     }
+    .logo {
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 16px;
+      letter-spacing: 5px;
+      background: linear-gradient(20deg, #8a773e , #bfa14a);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .subtitulo {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      margin-top: 1px;
+      color: #333;
+      position: relative;
+    }
+    .subtitulo::before,
+    .subtitulo::after {
+      content: "";
+      position: absolute;
+      height: 2px;
+      width: 80px;
+      background-color: #333;
+      top: 50%;
+    }
+    .subtitulo::before {
+      left: -90px;
+    }
+    .subtitulo::after {
+      right: -90px;
+    }
   </style>
 </head>
 <body>
@@ -54,7 +87,12 @@
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg">
     <div class="container">
-      <a class="navbar-brand" href="#">GESILEIDE CARVALHO ADVOGADA</a>
+      <a class="navbar-brand" href="#">
+        <div class="text-center">
+          <div class="logo">GESILEIDE CARVALHO</div>
+          <div class="subtitulo">ADVOGADA</div>
+        </div>
+      </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -71,7 +109,13 @@
   </nav>
 
   <!-- Hero -->
+
   <section class="hero">
+    <img src="img/logo.png" />
+    <div class="text-center">
+        <div class="logo">GESILEIDE CARVALHO</div>
+        <div class="subtitulo">ADVOGADA</div>
+      </div>
     <h1>Justiça com Compromisso e Ética</h1>
     <a href="#" class="btn btn-gold btn-lg">ENTRAR EM CONTATO</a>
   </section>
@@ -98,13 +142,21 @@
   </section>
 
   <!-- Sobre Nós -->
-  <section>
+  <section class="container my-5">
     <h2 class="section-title">QUEM SOMOS</h2>
-    <div class="container">
-      <p class="text-center">
-        Nosso escritório tem como missão oferecer serviços jurídicos com ética, transparência e dedicação,
-        buscando sempre a melhor solução para nossos clientes.
-      </p>
+    
+    <div class="row align-items-center">
+      <!-- Coluna da Imagem -->
+      <div class="col-md-3">
+        <img src="img/escritorio-advocacia.png" class="img-fluid rounded shadow" alt="Escritório de Advocacia">
+      </div>
+      <!-- Coluna do Texto -->
+      <div class="col-md-3">
+        <p class="mb-2">
+          Nosso escritório tem como missão oferecer serviços jurídicos com ética, transparência e dedicação,
+          buscando sempre a melhor solução para nossos clientes.
+        </p>
+      </div>
     </div>
   </section>
 
@@ -117,7 +169,12 @@
       <a href="#">Instagram</a>
       <a href="#">LinkedIn</a>
     </div>
-    <p>© Copyright – All Rights Reserved</p>
+    <div class="mt-2">
+      <a href="#" class="me-3"><i class="bi bi-facebook"></i></a>
+      <a href="#" class="me-3"><i class="bi bi-instagram"></i></a>
+      <a href="#"><i class="bi bi-linkedin"></i></a>
+    </div>
+    <p class="mt-3">© Copyright – All Rights Reserved</p>
   </footer>
 
   <!-- Bootstrap JS -->
